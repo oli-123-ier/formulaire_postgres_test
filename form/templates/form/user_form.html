@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Formulaire Utilisateur</title>
-</head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" rel="{%static 'from/styles.css'%}" >
+    </head>
 <body>
-    <h1>Formulaire Utilisateur</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Soumettre</button>
-    </form>
+    <div class="container" >
+        <h1>Formulaire Utilisateur</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Soumettre</button>
+        </form>
+    </div>
 </body>
 </html>
